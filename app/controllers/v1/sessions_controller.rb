@@ -8,9 +8,9 @@
     @user = User.where(email: params[:email]).first
 
     if @user&.valid_password?(params[:password])
-      #jwt = WebToken.encode(@user)
+      jwt = WebToken.encode(@user)
        #binding.pry
-      render :create, status: :created #, locals: { token: jwt }
+      render :create, status: :created, locals: { token: jwt }
       #render json: @user.as_json(only: [:id, :email, :username]), status: :created
 
     else

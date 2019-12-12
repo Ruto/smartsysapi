@@ -1,4 +1,5 @@
-class V1::StructuresController < ApplicationController
+module V1
+class StructuresController < ApplicationController
   before_action :set_structure, only: [:show, :edit, :update, :destroy]
   ##before_action :authenticate_user!
 
@@ -128,4 +129,5 @@ class V1::StructuresController < ApplicationController
         end
     end
 
+end
 end

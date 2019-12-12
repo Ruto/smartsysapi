@@ -6,5 +6,5 @@ json.data do
       :username
     )
   end
-#  json.token token
+  json.token token
 end

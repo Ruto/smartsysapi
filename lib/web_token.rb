@@ -11,7 +11,7 @@ module WebToken
     rescue JWT::ExpiredSignature
       :expired
     end
-    def encode(user)
+    def encode(@user)
       JWT.encode(
         token_params(user),
         WebToken::SECRET,
@@ -21,7 +21,7 @@ module WebToken
 
     private
 
-    def token_params(user)
+    def token_params(@user)
       {
         user_id: user.id,
         exp: EXPIRY,

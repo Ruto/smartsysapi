@@ -22,10 +22,12 @@ module SmartsysAPI
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    #config.autoload_paths << Rails.root.join('lib')    
+    #config.autoload_paths << Rails.root.join('lib')
+    #config.eager_load_paths << Rails.root.join('lib')
 
-    load_path_strategy = Rails.env.production? ? :eager_load_paths : :autoload_paths
-    config.public_send(load_path_strategy) << Rails.root.join('lib')
+    Rails.env.production? ? config.eager_load_paths : config.autoload_paths << Rails.root.join('lib')
+    #load_path_strategy = Rails.env.production? ? :eager_load_paths : :autoload_paths
+    #config.public_send(load_path_strategy) << Rails.root.join('lib')
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

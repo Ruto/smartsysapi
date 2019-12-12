@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
     resources :user_profiles
     resources :sessions, only: [:create, :destroy]
-    resources :registration, only: :create
+    resources :users, only: :create
     resources :structures
     namespace :structures do
         resources :incomes, :prices, :expenses, :indirect_expenses, :adminstrative_costs, :product_sales,

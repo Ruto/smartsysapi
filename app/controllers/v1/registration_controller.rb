@@ -4,7 +4,8 @@ module V1
       @user = User.new(user_params)
 
       if @user.save
-        render :create
+        jwt = WebToken.encode(@user)
+        render :create, status: :created, locals: { token: jwt }
       else
         head(:unprocessable_entity)
       end

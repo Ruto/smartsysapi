@@ -1,6 +1,6 @@
 module V1
 class UserProfilesController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   before_action :set_user_profile, only: [:show, :update, :destroy]
 
   # GET /user_profiles

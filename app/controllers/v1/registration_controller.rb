@@ -1,5 +1,4 @@
-module V1
-  class RegistrationController < ApplicationController
+class V1::RegistrationController < ApplicationController
     def create
       @user = User.new(user_params)
 
@@ -16,5 +15,4 @@ module V1
     def user_params
       params.permit(:email, :password, :password_confirmation)
     end
-  end
 end

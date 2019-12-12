@@ -1,5 +1,4 @@
-module V1
-class UserProfilesController < ApplicationController
+class V1::UserProfilesController < ApplicationController
   #before_action :authenticate_user!
   before_action :set_user_profile, only: [:show, :update, :destroy]
 
@@ -52,5 +51,4 @@ class UserProfilesController < ApplicationController
     def user_profile_params
       params.permit(:first_name, :middle_name, :last_name, :photo, :dob)
     end
-end
 end

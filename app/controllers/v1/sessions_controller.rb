@@ -1,4 +1,5 @@
-class V1::SessionsController < ApplicationController
+module V1
+ class SessionsController < ApplicationController
   def show
     current_user ? head(:ok) : head(:unauthorized)
   end
@@ -25,4 +26,5 @@ class V1::SessionsController < ApplicationController
       head(:unauthorized)
     end
   end
+ end
 end

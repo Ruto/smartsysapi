@@ -23,7 +23,7 @@ module SmartsysAPI
     config.load_defaults 5.2
 
     #config.autoload_paths << Rails.root.join('lib')
-    config.eager_load_paths << Rails.root.join('lib')
+    #config.eager_load_paths << Rails.root.join('lib')
 
     #Rails.env.production? ? config.eager_load_paths : config.autoload_paths << Rails.root.join('lib')
     #load_path_strategy = Rails.env.production? ? :eager_load_paths : :autoload_paths

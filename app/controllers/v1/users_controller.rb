@@ -3,7 +3,7 @@ class V1::UsersController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
-        jwt = WebToken.encode(@user)
+        #jwt = WebToken.encode(@user)
         render :create, status: :created, locals: { token: jwt }
       else
         head(:unprocessable_entity)

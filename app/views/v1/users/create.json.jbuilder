@@ -1,10 +1,8 @@
-json.data do
   json.user do
     json.call(
       @user,
       :email,
       :username
     )
+    #json.token token
   end
-  json.token token
-end

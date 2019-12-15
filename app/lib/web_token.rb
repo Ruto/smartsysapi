@@ -1,5 +1,9 @@
 module WebToken
-  SECRET = Rails.application.secrets.secret_key_base
+  if Rails.env.prodution?
+    SECRET = ENV['SECRET_KEY_BASE']
+  else
+    SECRET = Rails.application.secrets.secret_key_base
+  end
   EXPIRY = (Time.now + 1.day).to_i
   class << self
     def decode(token)

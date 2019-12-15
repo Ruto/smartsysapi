@@ -4,7 +4,7 @@ class Structure < ApplicationRecord
   validates :name, presence: true
   validates_uniqueness_of :name
 
-  belongs_to :user
+  #belongs_to :user
   #has_many :forms
   #belongs_to :staff
 

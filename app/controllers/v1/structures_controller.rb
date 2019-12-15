@@ -1,7 +1,7 @@
 module V1
 class StructuresController < ApplicationController
   before_action :set_structure, only: [:show, :edit, :update, :destroy]
-  ##before_action :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /structures
   # GET /structures.json

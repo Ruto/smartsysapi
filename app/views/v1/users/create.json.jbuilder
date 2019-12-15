@@ -4,5 +4,5 @@
       :email,
       :username
     )
-    #json.token token
+    json.token token
   end

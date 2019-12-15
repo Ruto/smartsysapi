@@ -7,7 +7,13 @@
 
  Rails.application.config.middleware.insert_before 0, Rack::Cors do
    allow do
-     origins 'https://smartsystemsapi.herokuapp.com' #example.com
+
+     if Rails.env.production?
+       origins 'https://smartsystemsapi.herokuapp.com'
+     else
+      origins 'http://localhost:3000'
+    end
+      #example.com
 
      resource '*',
        headers: :any,

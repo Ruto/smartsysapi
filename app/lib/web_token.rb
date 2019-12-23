@@ -26,7 +26,7 @@ module WebToken
         user_id: user.id,
         exp: EXPIRY,
         name: user.username,
-        #email: user.email
+        email: user.email
       }
     end
   end

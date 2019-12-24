@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
     resources :user_profiles
     resources :sessions, only: [:create, :destroy]
+    resources :reset_passwords, only: :create
     resources :users, only: :create
     resources :structures
     namespace :structures do

@@ -1,4 +1,4 @@
-module v1
+module V1
 class ResetPasswordsController < ApplicationController
    def create
     user = User.find_by_email(user_params)

@@ -32,6 +32,7 @@ gem 'jwt'
 gem 'pry'
 gem 'active_model_serializers'
 gem 'ancestry'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 
 group :development, :test do
